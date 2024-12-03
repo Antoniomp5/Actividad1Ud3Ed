@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Actividad_01_UD3_ED;
+package Actividad_01_UD3_ED.src.Actividad_01_UD3_ED;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -16,24 +16,24 @@ import java.io.IOException;
  */
 public class Actividad_01_UD3_ED 
 {
-    private static byte[] buffer = new byte[1000];
-    private static String fileName = "fichero.dat";
-    private static FileInputStream inputStream = null;
-    private static BufferedInputStream inputBuffer = null;
+    private static final byte[] tapon = new byte[1000];
+    private static final String nombreArchivo = "fichero.dat";
+    private static FileInputStream flujoEntrada = null;
+    private static BufferedInputStream taponEntrada = null;
 
     public static void inicializateFiles() throws FileNotFoundException
     {
-        inputStream = new FileInputStream(fileName);
-        inputBuffer = new BufferedInputStream(inputStream);
+        flujoEntrada = new FileInputStream(nombreArchivo);
+        taponEntrada = new BufferedInputStream(flujoEntrada);
     }
     
     public static int showFileText() throws IOException
     {
         int total = 0;
         int nRead = 0;
-        while((nRead = inputStream.read(buffer)) != -1) 
+        while((nRead = flujoEntrada.read(tapon)) != -1) 
         {
-            System.out.println(new String(buffer));
+            System.out.println(new String(tapon));
             total += nRead;
         }
         
@@ -61,10 +61,10 @@ public class Actividad_01_UD3_ED
         {
             try 
             {
-                if( inputBuffer != null && inputStream != null )
+                if( taponEntrada != null && flujoEntrada != null )
                 {
-                    inputStream.close();
-                    inputBuffer.close();
+                    flujoEntrada.close();
+                    taponEntrada.close();
                 }                
             } 
             catch (IOException ex) 
