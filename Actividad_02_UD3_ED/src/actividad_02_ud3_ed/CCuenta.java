@@ -55,7 +55,10 @@ public class CCuenta {
     {
         return saldo;
     }
-
+     /**
+   * 
+   * @param cantidad
+   */
     
     public void ingresar(double cantidad) throws Exception
     {
@@ -79,7 +82,11 @@ public class CCuenta {
         return cuenta;
     }
 
-  
+  /**
+   * 
+   * @param cuenta
+   * 
+   */
   public void setCuenta(String cuenta) {
     this.cuenta = cuenta;
   }
@@ -89,11 +96,20 @@ public class CCuenta {
     this.saldo = saldo;
   }
 
- 
+     /**
+   * 
+   * @param saldo
+   * 
+   */
   public double getTipoInterés() {
     return tipoInterés;
   }
 
+     /**
+   * 
+   * @param tipoInterés
+   * 
+   */
   
   public void setTipoInterés(double tipoInterés) {
     this.tipoInterés = tipoInterés;
