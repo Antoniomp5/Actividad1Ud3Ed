@@ -84,4 +84,22 @@ public class Main {
             }
         }
     }
+   /*                if(opcion==2){
+                    try{
+                        cuanta1.retirar(cantidad); (comando para retirar x 
+                        catidad)
+                     }catch (Exception e){
+                        System.out.print ("Fallo al retirar"); (errata cometida 
+                        por el usiario al retirar el dinero)
+                    }
+                    }else if(opcion==2){
+                    try{
+                        cuanta1.ingersar(cantidad); (comando para ingresar x 
+                        catidad)
+                     }catch (Exception e){
+                        System.out.print ("Fallo al ingresar"); (errata cometida 
+                        por el usiario al ingresar el dinero)
+                    }
+                }
+*/
 }
